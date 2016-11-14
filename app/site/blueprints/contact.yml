@@ -1,0 +1,17 @@
+title: Contact
+pages: true
+files: true
+icon: envelope
+fields:
+  title:
+    label: Title
+    type:  text
+    help: >
+      Please do not change.
+
+  section_intro:
+    label: Contact Introduction
+    type: headline
+  contact_info: 
+    label: General Contact Information
+    type: textarea

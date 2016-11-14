@@ -1,0 +1,17 @@
+title: Shop
+pages: true
+files: true
+icon: shopping-cart
+fields:
+  title:
+    label: Title
+    type:  text
+    help: >
+      Please do not change.
+
+  section_intro:
+    label: Shop Introduction
+    type: headline
+  shop_info: 
+    label: General Shop Information
+    type: textarea

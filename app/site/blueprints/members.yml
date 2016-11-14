@@ -1,0 +1,21 @@
+title: Members
+pages: true
+files: true
+icon: users
+fields:
+  title:
+    label: Title
+    type:  text
+    help: >
+      Please do not change.
+
+  section_intro:
+    label: Members Introduction
+    type: headline
+  members_info: 
+    label: General Member Information
+    type: textarea
+
+  section_members:
+    label: Members
+    type: headline

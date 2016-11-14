@@ -1,0 +1,17 @@
+title: Home
+pages: true
+files: true
+icon: home
+fields:
+  title:
+    label: Title
+    type:  text
+    help: >
+      Please do not change.
+
+  section_intro:
+    label: Introduction Section
+    type: headline
+  studio_info: 
+    label: General Studio Information
+    type: textarea
