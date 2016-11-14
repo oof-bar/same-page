@@ -12,8 +12,8 @@ This project is based on Kirby CMS. Additional requirements include:
 To get started, use the GitHub application to clone the repository, or run:
 
 ```
-$ git clone --recursive https://github.com/AugustMiller/plainkit.git
-$ cd plainkit
+$ git clone --recursive https://github.com/oof-bar/same-page.git
+$ cd same-page
 ```
 
 It's important that the `--recursive` flag is set, because we include a number of dependencies as submodules.
@@ -45,25 +45,6 @@ $ gulp watch
 ```
 
 When you're ready to deploy, `$ gulp build` will generate minified versions of `app.css` and `app.js`. This is already set up as a local task for [Capistrano](http://capistranorb.com), but you can run it manually, prior to using `rsync` or `scp`. Always remember to set up an ignore list before executing a command that overwrites remote files!
-
-### Starting a new Project
-
-To use this as the starting point for a new project, clone it as you ordinarily would, but specifying a directory name:
-
-```
-git clone --recursive https://github.com/AugustMiller/plainkit.git new-project
-cd new-project
-```
-
-Create your new project repository on GitHub, and replace the `origin` URL in the config:
-
-```
-git remote remove origin
-git remote add origin https://github.com/username/new-project.git
-git push origin master
-```
-
-Don't forget to update your server information in the Capistrano configuration files— including your new repo's URL.
 
 ### Content
 

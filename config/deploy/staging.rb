@@ -7,7 +7,7 @@
 # server 'example.com', user: 'deploy', roles: %w{app web}, other_property: :other_value
 # server 'db.example.com', user: 'deploy', roles: %w{db}
 
-set :app_domain, 'your.domain'
+set :app_domain, 'same-page.staging.oof.studio'
 server fetch(:app_domain), user: 'deploy', roles: ['web']
 
 
