@@ -13,6 +13,7 @@
 </head>
 <body class="<?= Help::body_classes() ?>">
   <header>
-    Header
+    <? snippet('nav') ?>
+    <? snippet('sidebar') ?>
   </header>
   <main>

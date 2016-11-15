@@ -1,8 +1,8 @@
 <? snippet('header') ?>
 
-<section class="studio">
+<section class="members">
   <div class="wrap">
-    <?= $page->studio_info()->kirbytext() ?>
+    <?= $page->members_info()->kirbytext() ?>
   </div>
 </section>
 
