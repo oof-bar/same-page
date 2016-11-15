@@ -13,3 +13,27 @@
 =wide
   +size(1400px, min)
     @content
+
+=button($color: $color-green)
+  font-weight: $type-weight-bold
+  font-family: $type-family-sans
+  color: $color
+  background-color: $color-white
+  border: 2px solid $color
+  padding: 0.75rem 1.25rem
+  text-align: center
+  text-decoration: none
+  cursor: pointer
+  display: inline-block
+  border-radius: 4px
+  line-height: 1
+  width: auto
+  +transition(0.15s linear box-shadow)
+
+  &:hover
+    background-color: $color
+    color: $color-white
+
+  &:focus
+    background-color: darken($color, 10%)
+    color: $color-white
