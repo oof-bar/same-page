@@ -1,13 +1,34 @@
-<div class="post">
-  <div class="date">
-    <span class="month"><?= $post->date('F', 'datetime') ?></span>
-    <span class="day"><?= $post->date('d', 'datetime') ?></span>,
-    <span class="year"><?= $post->date('Y', 'datetime') ?></span>
+<? snippet('header') ?>
+
+<section class="single-post">
+  <div class="wrap">
+    <div class="post">
+      <? if ( $cover_photo = $page->cover_photo()->toFile() ) { ?>
+        <div class="cover-photo">
+          <?= html::img( Help::resize($cover_photo, 'large')->url()) ?>
+        </div>
+      <? } ?>
+      <div class="date">
+        <span class="month"><?= $page->date('F', 'datetime') ?></span>
+        <span class="day"><?= $page->date('d', 'datetime') ?></span>,
+        <span class="year"><?= $page->date('Y', 'datetime') ?></span>
+      </div>
+      <div class="title">
+        <h3><?= $page->title() ?></h3>
+      </div>
+      <div class="message text-content">
+        <?= $page->message() ?>
+      </div>
+    </div>
   </div>
-  <div class="title">
-    <h3><?= $post->title() ?></h3>
+</section>
+
+<section class="pagination">
+  <div class="wrap">
+    <div class="return">
+      <a href="<?= page('blog')->url() ?>" class="button">Back to Blog</a>
+    </div>
   </div>
-  <div class="message text-content">
-    <?= $post->message() ?>
-  </div>
-</div>
+</section>
+
+<? snippet('footer') ?>
