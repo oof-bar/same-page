@@ -1,0 +1,25 @@
+title: Post
+pages:
+  hide: true
+files: true
+  sortable: true
+  fields:
+    title:
+      label: Alt Tag
+      type: text
+fields:
+  title:
+    label: Title
+    type:  text
+  datetime:
+    label: Post Date
+    type: datetime
+    required: true
+    default: now
+  message:
+    label: Post Content
+    type: textarea
+  cover_photo:
+    label: Cover Photo
+    type: select
+    options: files

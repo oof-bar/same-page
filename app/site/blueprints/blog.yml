@@ -1,0 +1,33 @@
+title: Blog
+icon: rss
+pages:
+  template: post
+  num:
+    mode: date
+    field: datetime
+    format: YmdHi
+  sort: flip
+files: true
+  sortable: true
+  fields:
+    title:
+      label: Alt Tag
+      type: text
+fields:
+  help:
+    label: Instructions
+    type: info
+    help: >
+      To create a new blog post, click "Add" in the panel to the left.
+  title:
+    label: Title
+    type:  text
+    help: >
+      Please do not edit.
+
+  section_intro:
+    label: Blog Introduction
+    type: headline
+  blog_info: 
+    label: General Blog Information
+    type: textarea
