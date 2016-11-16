@@ -1,0 +1,23 @@
+title: Product
+pages:
+  hide: true
+files: true
+  sortable: true
+  fields:
+    title:
+      label: Alt Tag
+      type: text
+fields:
+  title:
+    label: Title
+    type:  text
+  price:
+    label: price
+    type: number
+  product_description:
+    label: Product Description
+    type: textarea
+  product_photo:
+    label: Product Photo
+    type: select
+    options: files

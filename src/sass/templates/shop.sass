@@ -1,1 +1,18 @@
 section.shop
+  .product
+    +span-columns(4)
+    +omega(3)
+
+    .product-photo
+      margin-bottom: 2rem
+
+    .product-name
+      a
+        text-decoration: none
+
+        &:hover
+          text-decoration: underline
+
+    .product-price
+      &::before
+        content: '$'
