@@ -19,7 +19,6 @@ fields:
   section_members:
     label: Members
     type: headline
-
   members:
     label: Members
     type: structure
