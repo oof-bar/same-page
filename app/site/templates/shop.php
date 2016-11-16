@@ -11,9 +11,9 @@
             </div>
           <? } ?>
           <div class="product-name">
-            <h3><a href="#"><?= $product->title() ?></a></h3>
+            <h3><a href="<?= $product->url() ?>"><?= $product->title() ?></a></h3>
           </div>
-          <div class="product-price">
+          <div class="product-price price">
             <?= $product->price() ?>
           </div>
         </div>

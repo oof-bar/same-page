@@ -14,3 +14,17 @@
   height: 100vh
   background-size: cover
   background-position: center center
+
+.price
+  &::before
+    content: '$'
+
+.pagination
+  padding-top: 0
+  
+  .next
+    +span-columns(6)
+
+  .previous
+    +span-columns(6)
+    text-align: right

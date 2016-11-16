@@ -13,6 +13,23 @@ section.shop
         &:hover
           text-decoration: underline
 
-    .product-price
-      &::before
-        content: '$'
+section.single-product
+  .product
+    padding-bottom: 3rem
+    margin-bottom: 3rem
+    border-bottom: 2px solid $color-yellow
+    +outer-container
+
+  .product-photo
+    +span-columns(8)
+
+  .product-info
+    +span-columns(4)
+
+    .product-description
+      margin-top: 2rem
+
+  .button
+    +button($color: $color-yellow)
+
+
