@@ -13,6 +13,9 @@
 </head>
 <body class="<?= Help::body_classes() ?>">
   <header>
+    <div class="wordmark">
+      <h3><a href="<?= page('home')->url() ?>">Same Page</a></h3>
+    </div>
     <? snippet('nav') ?>
     <? snippet('sidebar') ?>
   </header>
