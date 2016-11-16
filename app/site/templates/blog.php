@@ -6,11 +6,11 @@
     <div class="feed">
       <? foreach ( $posts as $post ) { ?>
         <div class="post">
-          <div class="cover-photo">
-            <? if ( $cover_photo = $post->cover_photo()->toFile() ) { ?>
+          <? if ( $cover_photo = $post->cover_photo()->toFile() ) { ?>
+            <div class="cover-photo">
               <?= html::img( Help::resize($cover_photo, 'large')->url()) ?>
-            <? } ?>
-          </div>
+            </div>
+          <? } ?>
           <div class="date">
             <span class="month"><?= $post->date('F', 'datetime') ?></span>
             <span class="day"><?= $post->date('d', 'datetime') ?></span>,
@@ -27,5 +27,22 @@
     </div>
   </div>
 </section>
+
+<? if ( $pagination->hasPages() ) { ?>
+<section class="pagination">
+  <div class="wrap">
+    <div class="next">
+      <? if ( $pagination->hasNextPage() ) { ?>
+        <?= html::a($pagination->nextPageURL(), 'Older Posts', ['class' => 'button']) ?>
+      <? } ?>
+    </div>
+    <div class="previous">
+      <? if ( $pagination->hasPrevPage() ) { ?>
+        <?= html::a($pagination->prevPageURL(), 'Newer Posts', ['class' => 'button']) ?>
+      <? } ?>
+    </div>
+  </div>
+</section>
+<? } ?>
 
 <? snippet('footer') ?>

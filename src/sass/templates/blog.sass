@@ -21,3 +21,14 @@ section.blog
       top: 0
       left: 0
       width: 100%
+
+section.pagination
+  .next
+    +span-columns(6)
+
+  .previous
+    +span-columns(6)
+    text-align: right
+
+  .button
+    +button($color: $color-pink)
