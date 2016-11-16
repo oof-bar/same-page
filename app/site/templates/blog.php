@@ -7,7 +7,9 @@
       <? foreach ( $posts as $post ) { ?>
         <div class="post">
           <div class="cover-photo">
-            <?= $post->cover_photo() ?>
+            <? if ( $cover_photo = $post->cover_photo()->toFile() ) { ?>
+              <?= html::img( Help::resize($cover_photo, 'large')->url()) ?>
+            <? } ?>
           </div>
           <div class="date">
             <span class="month"><?= $post->date('F', 'datetime') ?></span>
