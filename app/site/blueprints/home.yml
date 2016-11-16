@@ -1,5 +1,5 @@
 title: Home
-pages: true
+pages: false
 files: true
 icon: home
 fields:
@@ -15,3 +15,8 @@ fields:
   studio_info: 
     label: General Studio Information
     type: textarea
+
+  studio_photo:
+    label: Introduction Photo
+    type: select
+    options: files
