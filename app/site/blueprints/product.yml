@@ -1,6 +1,5 @@
 title: Product
-pages:
-  hide: true
+pages: false
 files: true
   sortable: true
   fields:
