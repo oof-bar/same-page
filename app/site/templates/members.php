@@ -7,7 +7,9 @@
       <? foreach ( $page->members()->toStructure() as $member ) { ?>
         <li class="member">
           <div class="profile-photo">
-            <?= $member->photo() ?>
+            <figure class="avatar">
+              <?= html::img( Help::resize($member->photo()->toFile(), 'large')->url()) ?>
+            </figure>
           </div>
           <div class="about">
             <div class="name">
