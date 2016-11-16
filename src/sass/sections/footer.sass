@@ -6,3 +6,19 @@ footer
   left: 0
   padding: 3rem
   z-index: 30
+
+  .legal,
+  .social
+    display: inline-block
+
+  li
+    display: inline-block
+
+    &::before
+        content: '·'
+
+    a
+      text-decoration: none
+
+      &:hover
+        text-decoration: underline
