@@ -15,6 +15,12 @@
         <div class="product-price price">
           <?= $page->price() ?>
         </div>
+        <div class="add-to-cart">
+          <fieldset>
+            <input type="quantity" id="quantity" name="quantity" class="input" data-rule-required="true" placeholder="1">
+            <input type="submit" class="input button submit" value="Add to Cart" />
+          </fieldset>
+        </div>
         <div class="product-description">
           <?= $page->product_description()->kirbytext() ?>
         </div>

@@ -34,10 +34,23 @@ section.single-product
       +span-columns(12)
       margin-top: 2rem
 
-    .product-description
-      margin-top: 2rem
+    .add-to-cart
+      margin: 2rem 0
+
+      .button
+        +button($color: $color-yellow)
+        background-color: $color-yellow
+        color: $color-white
+        margin-top: 0.5rem
+
+        &:hover
+          background-color: darken($color-yellow, 5%)
+          border-color: darken($color-yellow, 5%)
 
   .button
     +button($color: $color-yellow)
+
+  .input
+    +input($color: $color-yellow)
 
 
