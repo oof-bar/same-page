@@ -4,14 +4,26 @@
   outline: none
 
 body
-  background-color: white
   position: relative
+  background-color: red
 
-header,
-main,
-footer
-  position: relative
-  z-index: 1
+  &.home
+    background-color: $color-blue
+
+  &.members
+    background-color: $color-green
+
+  &.shop
+    background-color: $color-yellow
+
+  &.blog
+    background-color: $color-pink
+
+  &.contact
+    background-color: $color-purple
+
+main
+  background-color: $color-white
   
 a
   color: inherit
