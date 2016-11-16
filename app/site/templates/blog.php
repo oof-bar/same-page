@@ -24,24 +24,22 @@
         </div>
       <? } ?>
     </div>
-  </div>
-</section>
 
-<? if ( $pagination->hasPages() ) { ?>
-<section class="pagination">
-  <div class="wrap">
-    <div class="next">
-      <? if ( $pagination->hasNextPage() ) { ?>
-        <?= html::a($pagination->nextPageURL(), 'Older Posts', ['class' => 'button']) ?>
-      <? } ?>
-    </div>
-    <div class="previous">
-      <? if ( $pagination->hasPrevPage() ) { ?>
-        <?= html::a($pagination->prevPageURL(), 'Newer Posts', ['class' => 'button']) ?>
-      <? } ?>
-    </div>
+    <? if ( $pagination->hasPages() ) { ?>
+      <div class="pagination">
+        <div class="next">
+          <? if ( $pagination->hasNextPage() ) { ?>
+            <?= html::a($pagination->nextPageURL(), 'Older Posts', ['class' => 'button']) ?>
+          <? } ?>
+        </div>
+        <div class="previous">
+          <? if ( $pagination->hasPrevPage() ) { ?>
+            <?= html::a($pagination->prevPageURL(), 'Newer Posts', ['class' => 'button']) ?>
+          <? } ?>
+        </div>
+      </div>
+    <? } ?>
   </div>
 </section>
-<? } ?>
 
 <? snippet('footer') ?>

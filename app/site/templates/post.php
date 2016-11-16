@@ -20,15 +20,14 @@
         <?= $page->message() ?>
       </div>
     </div>
-  </div>
-</section>
 
-<section class="pagination">
-  <div class="wrap">
-    <div class="return">
-      <a href="<?= page('blog')->url() ?>" class="button">Back to Blog</a>
+    <div class="pagination">
+      <div class="return">
+        <a href="<?= page('blog')->url() ?>" class="button">All Posts</a>
+      </div>
     </div>
   </div>
 </section>
+
 
 <? snippet('footer') ?>
