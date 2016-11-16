@@ -2,7 +2,6 @@
 
 <section class="blog">
   <div class="wrap">
-    <?= $page->blog_info()->kirbytext() ?>
     <div class="feed">
       <? foreach ( $posts as $post ) { ?>
         <div class="post">

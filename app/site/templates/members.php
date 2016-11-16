@@ -2,7 +2,6 @@
 
 <section class="members">
   <div class="wrap">
-    <?= $page->members_info()->kirbytext() ?>
     <ul class="member-list">
       <? foreach ( $page->members()->toStructure() as $member ) { ?>
         <li class="member">
