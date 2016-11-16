@@ -12,9 +12,7 @@ fields:
   section_intro:
     label: Members Introduction
     type: headline
-  members_info: 
-    label: General Member Information
-    type: textarea
+  description: description
 
   section_members:
     label: Members

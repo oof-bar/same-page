@@ -12,9 +12,7 @@ fields:
   section_intro:
     label: Contact Introduction
     type: headline
-  contact_info: 
-    label: General Contact Information
-    type: textarea
+  description: description
 
   contact_photo:
     label: Contact Photo

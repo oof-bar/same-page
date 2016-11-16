@@ -1,5 +1,7 @@
 title: Shop
 pages: true
+  template: product
+  sortable: true
 files: true
 icon: shopping-cart
 fields:
@@ -12,6 +14,4 @@ fields:
   section_intro:
     label: Shop Introduction
     type: headline
-  shop_info: 
-    label: General Shop Information
-    type: textarea
+  description: description

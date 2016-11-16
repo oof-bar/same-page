@@ -28,6 +28,4 @@ fields:
   section_intro:
     label: Blog Introduction
     type: headline
-  blog_info: 
-    label: General Blog Information
-    type: textarea
+  description: description

@@ -12,9 +12,7 @@ fields:
   section_intro:
     label: Introduction Section
     type: headline
-  studio_info: 
-    label: General Studio Information
-    type: textarea
+  description: description
 
   studio_photo:
     label: Introduction Photo
