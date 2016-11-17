@@ -17,8 +17,8 @@
         </div>
         <div class="add-to-cart">
           <fieldset>
-            <input type="quantity" id="quantity" name="quantity" class="input" data-rule-required="true" placeholder="1">
-            <button class=" button">Add to Cart</button>
+            <input type="quantity" id="quantity" name="quantity" class="quantity input" data-rule-required="true" placeholder="1">
+            <button class="add button">Add to Cart</button>
           </fieldset>
         </div>
         <div class="product-description">
