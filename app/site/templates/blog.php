@@ -16,7 +16,7 @@
             <span class="year"><?= $post->date('Y', 'datetime') ?></span>
           </div>
           <div class="title">
-            <h3><?= $post->title() ?></h3>
+            <h3><a href="<?= $post->url() ?>"><?= $post->title() ?></a></h3>
           </div>
           <div class="message text-content">
             <?= $post->message() ?>
@@ -27,16 +27,16 @@
 
     <? if ( $pagination->hasPages() ) { ?>
       <div class="pagination">
-        <div class="next">
-          <? if ( $pagination->hasNextPage() ) { ?>
+        <? if ( $pagination->hasNextPage() ) { ?>
+          <div class="next">
             <?= html::a($pagination->nextPageURL(), 'Older Posts', ['class' => 'button']) ?>
-          <? } ?>
-        </div>
-        <div class="previous">
-          <? if ( $pagination->hasPrevPage() ) { ?>
+          </div>
+        <? } ?>
+        <? if ( $pagination->hasPrevPage() ) { ?>
+          <div class="previous">
             <?= html::a($pagination->prevPageURL(), 'Newer Posts', ['class' => 'button']) ?>
-          <? } ?>
-        </div>
+          </div>
+        <? } ?>
       </div>
     <? } ?>
   </div>

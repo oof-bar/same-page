@@ -28,3 +28,20 @@
   .previous
     +span-columns(6)
     text-align: right
+
+    +mobile
+      margin-top: 0.5rem
+
+    &:first-child
+      +shift(6)
+      +mobile
+        +shift(0)
+
+  .next,
+  .previous
+    +mobile
+      +span-columns(12)
+      text-align: left
+
+      .button
+        width: 100%
