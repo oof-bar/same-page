@@ -9,9 +9,16 @@ section.single-post
       margin-bottom: 0.5rem
       font-size: $type-size-small
 
+    .title
+      a
+        text-decoration: none
+
+        &:hover
+          color: $color-pink
+
     .cover-photo
       width: 100%
-      height: 50vh
+      padding-bottom: 40%
       overflow: hidden
       position: relative
       margin-bottom: 3rem
@@ -21,6 +28,7 @@ section.single-post
         top: 0
         left: 0
         width: 100%
+
 
   .button
     +button($color: $color-pink)
