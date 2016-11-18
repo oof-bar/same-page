@@ -19,7 +19,7 @@
             <h3><a href="<?= $post->url() ?>"><?= $post->title() ?></a></h3>
           </div>
           <div class="message text-content">
-            <?= $post->message() ?>
+            <?= $post->message()->kirbytext() ?>
           </div>
         </div>
       <? } ?>

@@ -15,7 +15,7 @@
               <h3><?= $member->name() ?></h3>
             </div>
             <div class="bio">
-              <?= $member->bio() ?>
+              <?= $member->bio()->kirbytext() ?>
             </div>
             <div class="link">
               <a href="<?= $member->link() ?>" class="button" target="_blank">Portfolio</a>

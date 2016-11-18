@@ -17,7 +17,7 @@
         <h3><?= $page->title() ?></h3>
       </div>
       <div class="message text-content">
-        <?= $page->message() ?>
+        <?= $page->message()->kirbytext() ?>
       </div>
     </div>
 

@@ -8,7 +8,8 @@
   <div class="wrap">
     <div class="preview">
       <div class="content">
-        <?= $description ?>
+        <h2><?= $page->title() ?></h2>
+        <?= $description->kirbytext() ?>
       </div>
     </div>
   </div>
