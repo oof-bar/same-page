@@ -10,7 +10,7 @@
 set :app_domain, 'same-page.staging.oof.studio'
 server fetch(:app_domain), user: 'deploy', roles: ['web']
 
-
+set :deploy_to, '/var/www/oof/same-page.staging.oof.studio'
 
 # role-based syntax
 # ==================
