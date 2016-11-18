@@ -1,5 +1,5 @@
 {
-  "name": "plainkit",
+  "name": "same-page",
   "version": "1.0.0",
   "devDependencies": {
     "browserify": "^10.2.4",
