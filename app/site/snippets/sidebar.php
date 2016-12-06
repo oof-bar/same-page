@@ -4,13 +4,11 @@
   <? $description = $page->parents()->first()->description()->kirbytext() ?>
 <? } ?>
 
-<section class="sidebar">
-  <div class="wrap">
-    <div class="preview">
-      <div class="content">
-        <h2><?= $page->title() ?></h2>
-        <?= $description->kirbytext() ?>
-      </div>
+<article class="sidebar">
+  <div class="preview">
+    <h2><?= $page->title() ?></h2>
+    <div class="content">
+      <?= $description->kirbytext() ?>
     </div>
   </div>
-</section>
+</article>

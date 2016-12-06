@@ -1,11 +1,5 @@
 header
-  width: 30%
   color: white
-  position: fixed
-  top: 0
-  left: 0
-  height: 100%
-  padding: 3rem
 
   +tablet
     width: 100%
@@ -15,7 +9,36 @@ header
   +mobile
     padding: 1.5rem
 
-  .wordmark
+  nav.site
+    display: flex-item
+
     a
       text-decoration: none
 
+  nav.main-menu
+    display: none
+    +fill
+    background-color: $color-black
+
+  .sidebar
+    display: flex-item
+
+  .colophon
+    display: flex-item
+
+    .legal,
+    .social
+      display: inline-block
+      font-size: $type-size-small
+
+    li
+      display: inline-block
+
+      &::before
+          content: '·'
+
+      a
+        text-decoration: none
+
+        &:hover
+          text-decoration: underline
