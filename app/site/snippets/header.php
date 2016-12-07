@@ -27,7 +27,10 @@
         <? foreach ( $site->pages()->visible() as $page ) { ?>
           <li>
             <?= html::a($page->url(), $page->title(), [
-              'class' => $page->isOpen() ? 'active' : 'inactive'
+              'class' => join([
+                  $page->isOpen() ? 'active' : 'inactive',
+                  $page->intendedTemplate()
+                ], ' ')
             ]) ?>
           </li>
         <? } ?>
