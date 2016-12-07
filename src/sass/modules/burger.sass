@@ -1,0 +1,25 @@
+.burger
+  width: 25px
+  cursor: pointer
+  +transition(0.1s linear opacity)
+
+  .piece
+    background-color: $color-white
+    margin-bottom: 5px
+    height: 3px
+    +transition(0.25s ease-in-out all)
+
+  &:hover
+    opacity: 0.75
+
+  &.menu-open
+    .piece
+      &.bun
+        &.top
+          transform: translate(0, 8px) rotate(45deg)
+
+        &.bottom
+          transform: translate(0, -8px) rotate(-45deg)
+
+      &.patty
+        opacity: 0
