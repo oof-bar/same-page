@@ -61,3 +61,17 @@
   left: 0
   width: 100%
   height: 100%
+
+=filling-image
+  padding: 0
+  overflow: hidden
+
+  img
+    max-width: none
+
+=lazy-image
+  opacity: 0
+  +transition(0.25s linear opacity)
+
+  &.loaded
+    opacity: 1

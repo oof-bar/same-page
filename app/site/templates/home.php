@@ -1,6 +1,6 @@
 <? snippet('header') ?>
 
-<section class="studio cover" style="background-image: url('<?= Help::resize($page->studio_photo()->toFile(), 'large')->url() ?>')">
+<section class="studio cover" data-background-image="<?= Help::resize($page->studio_photo()->toFile(), 'large')->url() ?>">
 
 </section>
 
