@@ -9,6 +9,10 @@ header
   +mobile
     padding: 1.5rem
 
+  &::after
+    content: ''
+    height: 1rem
+
   nav.site
     display: flex-item
 
@@ -66,23 +70,3 @@ header
 
   .sidebar
     display: flex-item
-
-  .colophon
-    display: flex-item
-
-    .legal,
-    .social
-      display: inline-block
-      font-size: $type-size-small
-
-    li
-      display: inline-block
-
-      &::before
-          content: '·'
-
-      a
-        text-decoration: none
-
-        &:hover
-          text-decoration: underline
