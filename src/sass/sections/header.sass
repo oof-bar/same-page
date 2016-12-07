@@ -43,6 +43,22 @@ header
 
     a
       text-decoration: none
+      +transition(color 0.1s linear)
+
+      &.home:hover
+        color: $color-blue
+
+      &.members:hover
+        color: $color-green
+
+      &.shop:hover
+        color: $color-yellow
+
+      &.contact:hover
+        color: $color-purple
+
+      &.blog:hover
+        color: $color-pink
 
   .sidebar
     display: flex-item
