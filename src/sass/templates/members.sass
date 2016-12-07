@@ -2,22 +2,20 @@ section.members
   .member-list
     li
       margin-bottom: 5rem
-      +outer-container
+      display: flex
+      justify-content: flex-start
+      flex-direction: row
+      align-items: center
 
   .profile-photo
-    +span-columns(3)
+    flex-basis: 20%
+    margin-right: 3rem
+
     +tablet
-      +span-columns(5)
       margin-bottom: 2rem
-    +mobile
-      +span-columns(12)
 
   .about
-    +span-columns(9)
-    +tablet
-      +span-columns(7)
-    +mobile
-      +span-columns(12)
+    flex-basis: 80%
 
   .link
     margin-top: 1.5rem
