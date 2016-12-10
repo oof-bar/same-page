@@ -1,6 +1,6 @@
 <? class ProductPage extends Page {
   public function formatted_price () {
-    return '$' . preg_replace('/\.00$/', '', number_format($this->float_price(), 2));
+    return preg_replace('/\.00$/', '', number_format($this->float_price(), 2));
   }
 
   public function float_price () {
@@ -42,7 +42,7 @@
     $price = html::tag('div', $this->formatted_price() . $unit, ['class' => 'price']);
     $add = html::tag('div', 'Add to Cart', ['class' => 'add-to-cart']);
 
-    return html::a('#', $price . $add, array_merge([
+    return html::tag('button', $price . $add, array_merge([
       'class' => 'buy snipcart-add-item',
       'data-item-id' => $this->uid(),
       'data-item-name' => $this->title(),
