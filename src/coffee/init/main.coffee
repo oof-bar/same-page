@@ -6,6 +6,7 @@ module.exports = ->
     after: require './after'
     common: require './common'
     home: require './home'
+    members: require './members'
 
   actions.before()
   actions.common()

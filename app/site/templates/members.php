@@ -6,8 +6,8 @@
       <? foreach ( $page->members()->toStructure() as $member ) { ?>
         <li class="member">
           <div class="profile-photo">
-            <figure class="avatar">
-              <?= html::img( Help::resize($member->photo()->toFile(), 'large')->url()) ?>
+            <figure class="avatar" data-background-image="<?= Help::resize($member->photo()->toFile(), 'large')->url() ?>">
+              
             </figure>
           </div>
           <div class="about">
@@ -18,7 +18,7 @@
               <?= $member->bio()->kirbytext() ?>
             </div>
             <div class="link">
-              <a href="<?= $member->link() ?>" class="button" target="_blank">Portfolio</a>
+              <a href="<?= $member->link() ?>" class="button" target="_blank">Website</a>
             </div>
           </div>
         </li>

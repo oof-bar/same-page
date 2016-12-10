@@ -8,14 +8,26 @@ section.members
       align-items: center
 
   .profile-photo
-    flex-basis: 20%
+    width: 20%
     margin-right: 3rem
 
     +tablet
       margin-bottom: 2rem
 
+    .avatar
+      +filling-image
+      border-radius: 100%
+      padding-bottom: 100%
+      height: 0
+      width: 100%
+      backface-visibility: visible
+      transform: translate3d(0, 0, 0)
+
+      img
+        +lazy-image
+
   .about
-    flex-basis: 80%
+    width: 80%
 
   .link
     margin-top: 1.5rem
