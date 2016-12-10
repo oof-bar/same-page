@@ -5,7 +5,7 @@
     <div class="product">
       <? if ( $product_photo = $page->product_photo()->toFile() ) { ?>
         <div class="product-photo">
-          <?= html::img( Help::resize($product_photo, 'large')->url()) ?>
+          <?= html::img(Help::resize($product_photo, 'large')->url()) ?>
         </div>
       <? } ?>
       <div class="product-info">
@@ -15,12 +15,9 @@
         <div class="product-price price">
           <?= $page->price() ?>
         </div>
-        <div class="add-to-cart">
-          <fieldset>
-            <input type="quantity" id="quantity" name="quantity" class="quantity input" data-rule-required="true" placeholder="1">
-            <?= $page->buy_button() ?>
-          </fieldset>
-        </div>
+        <fieldset class="add-to-cart">
+          <?= $page->buy_button() ?>
+        </fieldset>
         <div class="product-description">
           <?= $page->product_description()->kirbytext() ?>
         </div>
