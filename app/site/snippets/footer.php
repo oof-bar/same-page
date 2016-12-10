@@ -16,6 +16,7 @@
         </ul>
       </div>
     </footer>
+
     <?= js([
       '@auto',
       'https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js',
