@@ -1,5 +1,3 @@
-$ = require 'cash-dom'
-
 Sizer = require 'util/sizer'
 
 module.exports = class Cover

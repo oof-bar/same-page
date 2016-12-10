@@ -11,12 +11,45 @@ fields:
     label: Title
     type:  text
   price:
-    label: price
+    label: Base Price
     type: number
-  product_description:
+    step: .01
+  description:
     label: Product Description
     type: textarea
-  product_photo:
-    label: Product Photo
-    type: select
-    options: files
+  cart_notes:
+    label: Cart Description
+    type: textarea
+    buttons: false
+    help: >
+      Add notes here that succinctly describe the product when it appears in a customer's cart.
+  primary_image:
+    label: Primary Product Image
+    type: image
+
+  # Variations
+  variations:
+    label: Product Variations
+    type: structure
+    style: table
+    fields:
+      attribute:
+        label: Attribute Name
+        type: text
+        required: true
+        help: >
+          When two or more attribute names match, we'll make their values available as a drop-down configuration option in the cart.
+      value:
+        label: Value
+        type: text
+        required: true
+        help: >
+          This text will be displayed in the select menu, exactly as it appears here.
+      adjustment:
+        label: Adjusted Price
+        type: number
+        step: .01
+        min: -99999
+        icon: dollar
+        help: >
+          Like the base price, this should be entered as a dollar-and-cents amount. Negative numbers are allowed, to discount the base price. Leave blank for no adjustment.

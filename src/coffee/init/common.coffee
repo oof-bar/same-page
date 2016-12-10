@@ -1,5 +1,3 @@
-$ = require 'cash-dom'
-
 module.exports = ->
   console.log 'Common'
 

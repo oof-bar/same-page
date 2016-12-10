@@ -1,5 +1,3 @@
-$ = require 'cash-dom'
-
 module.exports = class Sizer
   constructor: (options = {}) ->
     @screen = $(window)

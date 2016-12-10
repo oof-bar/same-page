@@ -16,6 +16,12 @@
         </ul>
       </div>
     </footer>
-    <?= js(['@auto', 'assets/js/app.js']) ?>
+    <?= js([
+      '@auto',
+      'https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js',
+      'assets/js/app.js'
+    ]) ?>
+
+    <?= Snipcart::javascript_tag() ?>
   </body>
 </html>

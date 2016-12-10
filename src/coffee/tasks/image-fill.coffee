@@ -1,5 +1,3 @@
-$ = require 'cash-dom'
-
 Cover = require 'util/cover'
 ImageLoad = require 'util/image-load-notifier'
 
