@@ -71,6 +71,10 @@
     width: 100%
     top: ($size / 2) - ($font-size / 2)
 
+=icon($name)
+  background-image: url(inline-asset('app/assets/images/icons/#{$name}.svg'))
+  background-repeat: no-repeat
+  background-size: 24px 24px
 
 =fill($position: absolute)
   position: $position

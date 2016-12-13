@@ -14,8 +14,6 @@ header
     height: 1rem
 
   nav.site
-    display: flex-item
-
     h1
       font-size: 2rem
 
@@ -28,6 +26,10 @@ header
       top: 3rem
       right: 3rem
       margin-top: 3px
+
+      +mobile
+        top: 1.5rem
+        right: 1.5rem
 
 
   nav.main-menu
@@ -51,7 +53,6 @@ header
       height: 100%
 
       li
-        display: flex-item
         margin-bottom: 0.5rem
 
         &:last-child
@@ -78,8 +79,6 @@ header
         color: $color-pink
 
   .sidebar
-    display: flex-item
-
     h2
       a
         text-decoration: none

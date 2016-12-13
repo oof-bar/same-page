@@ -17,6 +17,10 @@
       </div>
     </footer>
 
+    <aside class="cart-control">
+      <a href="#" class="snipcart-checkout">Cart</a>
+    </aside>
+
     <?= js([
       '@auto',
       'https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js',

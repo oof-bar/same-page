@@ -1,9 +1,29 @@
 // Snipcart uses a BEM-like naming scheme, which makes this stylesheet abnormally flat and verbose.
 
+// Our checkout button
+aside.cart-control
+  position: fixed
+  top: 1rem
+  right: 1rem
+
+  +mobile
+    top: auto
+    bottom: 1rem
+
+  a
+    +icon('cart-dark')
+    display: inline-block
+    text-indent: 9999px
+    width: 2.5rem
+    height: 2.5rem
+    border-radius: 100%
+    background-color: $color-grey
+    background-position: center center
+
 .snip-layout
   +fill(fixed)
   z-index: 3
-  background-color: white
+  background-color: $color-white
   padding: 3rem
   overflow-y: scroll
 
@@ -30,8 +50,8 @@
       transition: 100ms linear border-color, 100ms linear background-color
 
       &:checked
-        background-color: $color-green
-        border-color: $color-green
+        background-color: $color-blue
+        border-color: $color-blue
         background-image: url(inline-asset('app/assets/images/icons/check-light.svg'))
 
   select
@@ -40,6 +60,7 @@
     background-position: right 0.75rem center
     background-repeat: no-repeat
     background-image: url(inline-asset('app/assets/images/icons/dropdown-dark.svg'))
+    padding-right: 3em
 
     &:focus
       border-color: $color-blue
@@ -96,13 +117,14 @@
 
 // Subtotal
 .snip-header__total
-  margin-bottom: 2rem
+  margin-top: 2rem
 
 .snip-header__total-label
   margin-right: 0.25rem
 
 // Close Button
 .snip-header__continue
+  margin-top: 2rem
   +button($color-green)
 
 // Currently-rendered screen
@@ -135,6 +157,9 @@
   background-color: rgba($color-yellow, 0.05)
   border: 2px solid $color-yellow
   border-radius: 4px
+
+  +mobile
+    padding: 1rem
 
 // Forms
 .snip-form__container
@@ -266,7 +291,7 @@
     margin-right: 1rem
 
     &.snip-btn--left
-      +button($color-pink)
+      +button($color-yellow)
 
     &.snip-btn--right
       +button($color-blue)
