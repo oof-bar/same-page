@@ -46,20 +46,35 @@
   justify-content: space-between
   counter-reset: steps
   margin-bottom: 2rem
+  flex-wrap: wrap
 
   .snip-step__item
     counter-increment: steps
     text-align: center
     opacity: 0.5
     cursor: pointer
+    padding: 1rem
+    border-radius: 4px
+    transition opacity, color
+
+    +tablet
+      padding: 1rem
+
+    +mobile
+      width: 50%
+      margin-bottom: 1rem
 
     &::before
       display: block
       content: counter(steps)
+      font-weight: bold
 
-    &.js-active,
     &:hover
+      opacity: 0.75
+
+    &.js-active
       opacity: 1
+      background-color: $color-grey
 
     &.js-active
       color: $color-blue
@@ -87,6 +102,11 @@
 .snipcart-step
   margin-bottom: 2rem
 
+  h1,
+  h2,
+  h3
+    font-size: 1.5rem
+
 // Columnar Layouts
 .snip-cols
   +outer-container
@@ -98,17 +118,26 @@
     &:not(:nth-child(2n + 1))
       +shift(1)
 
+    +mobile
+      +shift(0)
+      +span-columns(12)
+
 // Empty Cart
 .snip-product__empty
   padding: 2rem
-  background-color: $color-grey
-  border: 2px solid $color-grey-dark
-  border-radius: 5px
+  background-color: rgba($color-yellow, 0.05)
+  border: 2px solid $color-yellow
+  border-radius: 4px
 
 // Forms
 .snip-form__container
   margin-bottom: 1rem
   position: relative
+
+  &.snipcart-checkbox-field
+    .snip-form__label
+      display: inline-block
+      margin-bottom: 0
 
 .snip-form__label
   display: block
@@ -145,12 +174,25 @@
   text-align: right
 
 .snip-table__body
+  h1,
+  h2,
+  h3
+    font-size: inherit
+    margin: 0
+
+  &.snip-table__body--big
+    font-weight: bold
 
 // Cart Items
 .snip-table__item
-  h2
-    font-size: inherit
-    font-weight: bold
+
+.snip-quantity-trigger
+  display: flex
+  flex-direction: row
+  align-items: stretch
+
+.snip-quantity-trigger__text
+  width: (100% / 3)
   text-align: center
   padding: 0.5rem
 
