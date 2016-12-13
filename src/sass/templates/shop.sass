@@ -11,17 +11,19 @@ section.shop
     +mobile
       +span-columns(12)
 
-    .product-photo
-      margin-bottom: 2rem
-
     a
       text-decoration: none
-      border: 2px solid $color-white
-      padding: 1rem
       display: block
 
       &:hover
-        border: 2px solid $color-yellow
+        img
+          opacity: 0.75
+
+    .product-photo
+      margin-bottom: 2rem
+
+    img
+      +transition(100ms linear opacity)
 
 section.single-product
   .product
@@ -31,53 +33,49 @@ section.single-product
     +outer-container
 
   .product-photo
-    +span-columns(7)
+    +span-columns(6)
     +mobile
       +span-columns(12)
 
     img
       margin: 0 auto
 
+  .product-price
+
   .product-info
     +span-columns(5)
+    +shift(1)
+
     +mobile
+      +shift(0)
       +span-columns(12)
       margin-top: 2rem
 
-    .add-to-cart
-      margin: 2rem 0
+  .product-name,
+  .product-price,
+  .product-description,
+  .product-variations
+    margin-bottom: 1rem
 
-      .add
-        +button($color: $color-yellow)
-        background-color: $color-yellow
-        color: $color-white
-        display: inline-block
-        width: auto
+  .product-variations
+    h4
+      font-weight: bold
 
-        &:hover
-          background-color: darken($color-yellow, 5%)
-          border-color: darken($color-yellow, 5%)
+    dl
+      +clearfix
 
-      .quantity
-        +input($color: $color-yellow)
-        text-align: center
-        width: 80px
-        padding-left: 0
-        padding-right: 0
-        display: inline-block
-        margin-bottom: 0.25rem
+    dt,
+    dd
+      float: left
 
-      .add,
-      .quantity
-        +mobile
-          +span-columns(12)
+    dt
+      clear: left
+      margin-right: 0.2em
 
-  
-  .button
-    +button($color: $color-yellow)
+      &::after
+        content: ':'
 
-.product-price
-  font-size: 1.2rem
+    .variation-name
 
-
-
+    .options
+      +inline-list

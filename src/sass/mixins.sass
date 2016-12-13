@@ -41,19 +41,36 @@
     color: $color-white
 
 =input($color: $color-green)
-  font-weight: $type-weight-bold
-  font-family: $type-family-sans
+  font: inherit
   color: $color
   background-color: $color-white
   border: 2px solid $color
-  padding: 0.75rem 1.25rem
+  padding: 0.75rem 1rem
   text-decoration: none
   display: block
   border-radius: 4px
-  line-height: 1
-  width: auto
+  width: 100%
   -webkit-appearance: none
   font-size: 100%
+
+=sticker($size: 100px, $color-fill: $color-black, $color-text: $color-white)
+  $font-size: ($size / 4)
+  width: $size
+  height: $size
+  border-radius: 100%
+  font-size: $font-size
+  line-height: 1
+  display: block
+  position: relative
+  background-color: $color-fill
+  color: $color-text
+
+  & > *
+    position: absolute
+    text-align: center
+    width: 100%
+    top: ($size / 2) - ($font-size / 2)
+
 
 =fill($position: absolute)
   position: $position
@@ -75,3 +92,15 @@
 
   &.loaded
     opacity: 1
+
+=small-caps
+  font-size: 0.8em
+  text-transform: uppercase
+  letter-spacing: 0.04em
+
+=inline-list
+  li
+    display: inline
+
+    &:not(:last-child)::after
+      content: ', '

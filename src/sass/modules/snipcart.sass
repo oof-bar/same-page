@@ -1,4 +1,163 @@
+// Snipcart uses a BEM-like naming scheme, which makes this stylesheet abnormally flat and verbose.
+
 .snip-layout
   +fill(fixed)
   z-index: 3
   background-color: white
+  padding: 3rem
+  overflow-y: scroll
+
+  +mobile
+    padding: 0.5rem
+
+// Global
+.snip-layout
+  input
+    +input($color-grey-dark)
+
+  select
+    +input($color-grey-dark)
+
+// Steps
+.snip-steps
+  display: flex
+  flex-direction: row
+  width: 100%
+  justify-content: space-between
+  counter-reset: steps
+  margin-bottom: 2rem
+
+  .snip-step__item
+    counter-increment: steps
+    text-align: center
+    opacity: 0.5
+    cursor: pointer
+
+    &::before
+      display: block
+      content: counter(steps)
+
+    &.js-active,
+    &:hover
+      opacity: 1
+
+    &.js-active
+      color: $color-blue
+
+// Cart Header
+.snip-header
+  margin-bottom: 2rem
+
+// Cart Titling
+.snip-header__title
+  text-transform: capitalize
+
+// Subtotal
+.snip-header__total
+  margin-bottom: 2rem
+
+.snip-header__total-label
+  margin-right: 0.25rem
+
+// Close Button
+.snip-header__continue
+  +button($color-green)
+
+// Currently-rendered screen
+.snipcart-step
+  margin-bottom: 2rem
+
+// Columnar Layouts
+.snip-cols
+  +outer-container
+
+  .snip-col
+    +span-columns(5)
+    margin-bottom: 2rem
+
+    &:not(:nth-child(2n + 1))
+      +shift(1)
+
+// Empty Cart
+.snip-product__empty
+  padding: 2rem
+  background-color: $color-grey
+  border: 2px solid $color-grey-dark
+  border-radius: 5px
+
+// Forms
+.snip-form__container
+  margin-bottom: 1rem
+  position: relative
+
+.snip-form__label
+  display: block
+  margin-bottom: 0.5rem
+
+.snip-form__error
+  font-size: $type-size-small
+  color: $color-pink
+  margin-top: 0.5rem
+
+.snip-form__help
+  position: absolute
+  right: 0
+  top: 0
+  color: $color-blue
+  text-decoration: none
+
+// Tables
+.snip-table
+  width: 100%
+
+  th,
+  td
+    padding: 0.75rem 0.75rem 0.75rem 0
+    border-bottom: 2px solid $color-grey
+
+  tr:not(:last-child)
+
+.snip-table__header
+  text-align: left
+  +small-caps
+
+.snip-table__cell--right
+  text-align: right
+
+.snip-table__body
+
+// Cart Items
+.snip-table__item
+  h2
+    font-size: inherit
+    font-weight: bold
+
+.snip-quantity-trigger__btn
+  .snip-quantity-trigger__btn--minus
+  .snip-quantity-trigger__btn--add
+
+.snip-product__remove
+  color: $color-pink
+
+  &::after
+    content: 'Remove'
+
+// Discounts
+.snip-discounts
+  margin-bottom: 2rem
+
+// Actions
+.snip-actions
+  +outer-container
+  margin-bottom: 2rem
+
+  .snip-btn
+    margin-right: 1rem
+
+    &.snip-btn--left
+      +button($color-pink)
+
+    &.snip-btn--right
+      +button($color-blue)
+
+// Buttons
