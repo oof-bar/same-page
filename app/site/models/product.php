@@ -52,7 +52,8 @@
       'data-item-price' => number_format($this->floatPrice(), 2),
       'data-item-weight' => $this->weight(),
       'data-item-url' => page('shop')->url(),
-      'data-item-description' => $this->cart_notes()
+      'data-item-description' => $this->cart_notes(),
+      'data-item-weight' => $this->weight()->or(0)
     ], $this->serializeOptions()));
   }
 
