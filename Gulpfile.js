@@ -7,7 +7,8 @@ var gulp = require('gulp'),
     sass = require('gulp-sass'),
     test = require('gulp-if'),
     del = require('del'),
-    rename = require('gulp-rename');
+    rename = require('gulp-rename'),
+    sassInlineAsset = require('sass-inline-asset');
 
 var paths = {
   scripts: {
@@ -17,7 +18,7 @@ var paths = {
   },
   stylesheets: {
     main: ['src/sass/app.sass'],
-    listen: ['src/sass/**/*.sass'],
+    listen: ['src/sass/**/*.sass', 'app/assets/images/icons/**/*.svg'],
     out: 'app/assets/css'
   }
 };
@@ -38,7 +39,8 @@ var templates = {
     return gulp.src(paths.stylesheets.main)
       .pipe(sass({
         outputStyle: (compress ? 'compressed' : 'expanded'),
-        includePaths: require('node-neat').includePaths.concat(require('node-reset-scss').includePath)
+        includePaths: require('node-neat').includePaths.concat(require('node-reset-scss').includePath),
+        functions: sassInlineAsset()
       }).on('error', sass.logError))
       .pipe(gulp.dest(paths.stylesheets.out));
 

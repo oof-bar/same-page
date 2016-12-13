@@ -15,8 +15,28 @@
   input
     +input($color-grey-dark)
 
+    &[type="checkbox"]
+      display: inline-block
+      vertical-align: -25%
+      width: 24px
+      height: 24px
+      margin: 0 0.5rem 0 0
+      padding: 0
+      background-position: center center
+      background-repeat: no-repeat
+      transition: 100ms linear border-color, 100ms linear background-color
+
+      &:checked
+        background-color: $color-green
+        border-color: $color-green
+        background-image: url(inline-asset('app/assets/images/icons/check-light.svg'))
+
   select
     +input($color-grey-dark)
+    background-position: 95% center
+    background-position: right 0.5rem center
+    background-repeat: no-repeat
+    background-image: url(inline-asset('app/assets/images/icons/dropdown-dark.svg'))
 
 // Steps
 .snip-steps
@@ -131,10 +151,29 @@
   h2
     font-size: inherit
     font-weight: bold
+  text-align: center
+  padding: 0.5rem
 
 .snip-quantity-trigger__btn
-  .snip-quantity-trigger__btn--minus
-  .snip-quantity-trigger__btn--add
+  width: (100% / 3)
+  text-align: center
+  text-decoration: none
+  padding: 0.5rem
+  border-radius: 4px
+
+  &::after
+    display: block
+
+  &:hover
+    background-color: $color-grey
+
+  &.snip-quantity-trigger__btn--minus
+    &::after
+      content: '-'
+
+  &.snip-quantity-trigger__btn--add
+    &::after
+      content: '+'
 
 .snip-product__remove
   color: $color-pink
@@ -149,7 +188,7 @@
 // Actions
 .snip-actions
   +outer-container
-  margin-bottom: 2rem
+  margin-top: 2rem
 
   .snip-btn
     margin-right: 1rem
@@ -161,3 +200,9 @@
       +button($color-blue)
 
 // Buttons
+
+// Footer
+.snip-footer
+  margin-top: 2rem
+  font-size: $type-size-small
+  color: $color-grey-dark

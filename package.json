@@ -17,6 +17,7 @@
     "gulp-util": "^3.0.6",
     "node-bourbon": "^4.2.3",
     "node-neat": "^1.7.2",
-    "node-reset-scss": "^1.0.1"
+    "node-reset-scss": "^1.0.1",
+    "sass-inline-asset": "https://github.com/AugustMiller/sass-inline-asset.git"
   }
 }
