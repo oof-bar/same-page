@@ -18,7 +18,7 @@
           </div>
         </div>
         <div class="product-description">
-          <?= $page->product_description()->kirbytext() ?>
+          <?= $page->description()->kirbytext() ?>
         </div>
 
         <? if ( $page->hasOptions() ) { ?>

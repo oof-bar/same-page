@@ -50,9 +50,12 @@
       'data-item-id' => $this->uid(),
       'data-item-name' => $this->title(),
       'data-item-price' => number_format($this->floatPrice(), 2),
-      'data-item-weight' => $this->weight(),
+      'data-item-weight' => $this->weight(), # Grams
+      'data-item-width' => $this->dimensions_width()->int(), # Centimeters
+      'data-item-height' => $this->dimensions_height()->int(), # Centimeters
+      'data-item-depth' => $this->dimensions_depth()->int(), # Centimeters
       'data-item-url' => page('shop')->url(),
-      'data-item-description' => $this->cart_notes(),
+      'data-item-description' => $this->cart_notes()->html(),
       'data-item-weight' => $this->weight()->or(0)
     ], $this->serializeOptions()));
   }

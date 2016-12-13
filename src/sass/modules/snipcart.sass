@@ -15,6 +15,9 @@
   input
     +input($color-grey-dark)
 
+    &:focus
+      border-color: $color-blue
+
     &[type="checkbox"]
       display: inline-block
       vertical-align: -25%
@@ -34,9 +37,13 @@
   select
     +input($color-grey-dark)
     background-position: 95% center
-    background-position: right 0.5rem center
+    background-position: right 0.75rem center
     background-repeat: no-repeat
     background-image: url(inline-asset('app/assets/images/icons/dropdown-dark.svg'))
+
+    &:focus
+      border-color: $color-blue
+      background-image: url(inline-asset('app/assets/images/icons/dropdown-blue.svg'))
 
 // Steps
 .snip-steps
@@ -217,11 +224,34 @@
     &::after
       content: '+'
 
+.snipcart-customfield-dropdown
+  select
+    font-size: $type-size-small
+
 .snip-product__remove
   color: $color-pink
 
   &::after
     content: 'Remove'
+
+.snip-product--selectable
+  cursor: pointer
+
+  td:first-child
+    padding-left: 2.5rem
+    background-position: 0.75rem center
+    background-repeat: no-repeat
+
+  &:hover
+    background-color: lighten($color-grey, 2%)
+
+  &.js-selected
+    background-color: $color-grey
+
+    td:first-child
+      background-image: url(inline-asset('app/assets/images/icons/check-blue.svg'))
+
+.snip-product--selectable-item
 
 // Discounts
 .snip-discounts

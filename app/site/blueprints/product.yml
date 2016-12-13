@@ -10,15 +10,41 @@ fields:
   title:
     label: Title
     type:  text
+    width: 1/2
   price:
     label: Base Price
     type: number
     step: .01
+    width: 1/2
+
+  section_physical:
+    label: Physical Dimensions
+    type: headline
+
   weight:
     label: Weight
     type: number
-    help: >
-      Product weight in grams.
+    help: Product weight in grams.
+    width: 1/4
+  dimension_height:
+    label: Height
+    type: number
+    help: Product height in centimeters.
+    icon: cube
+    width: 1/4
+  dimension_width:
+    label: Width
+    type: number
+    help: Product width in centimeters.
+    icon: cube
+    width: 1/4
+  dimension_depth:
+    label: Depth
+    type: number
+    help: Product depth in centimeters.
+    icon: cube
+    width: 1/4
+
   description:
     label: Product Description
     type: textarea
