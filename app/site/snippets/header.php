@@ -14,7 +14,13 @@
 <body class="<?= Help::body_classes() ?>">
   <header>
     <nav class="site">
-      <h3><a href="<?= page('home')->url() ?>">Same Page</a></h3>
+      <div class="logo">
+        <h3>
+          <a href="<?= $site->url() ?>" title="<?= $site->title()->html() ?>">
+            <?= Help::inline_svg(Help::asset_file('images', 'wordmark.svg'), [575, 181]) ?>
+          </a>
+        </h3>
+      </div>
       <button class="menu burger" title="Menu">
         <div class="piece bun top" aria-hidden="true"></div>
         <div class="piece patty" aria-hidden="true"></div>
