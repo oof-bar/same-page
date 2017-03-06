@@ -17,7 +17,7 @@
       <div class="logo">
         <h3>
           <a href="<?= $site->url() ?>" title="<?= $site->title()->html() ?>">
-            <?= Help::inline_svg(Help::asset_file('images', 'wordmark.svg'), [575, 181]) ?>
+            <?= Help::inline_svg(Help::asset_file('images', 'wordmark.svg'), [575, 118]) ?>
           </a>
         </h3>
       </div>
