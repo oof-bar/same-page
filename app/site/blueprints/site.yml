@@ -5,7 +5,7 @@ pages:
     - members
     - shop
     - contact
-    - blog
+    - news
 files: true
 fields:
   title:
