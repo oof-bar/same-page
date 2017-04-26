@@ -17,9 +17,9 @@
       </div>
     </footer>
 
-    <aside class="cart-control">
+    <!--aside class="cart-control">
       <a href="#" class="snipcart-checkout">Cart</a>
-    </aside>
+    </aside-->
 
     <?= js([
       '@auto',
