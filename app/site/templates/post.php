@@ -23,7 +23,7 @@
 
     <div class="pagination">
       <div class="return">
-        <a href="<?= page('blog')->url() ?>" class="button">All Posts</a>
+        <a href="<?= page('news')->url() ?>" class="button">All Posts</a>
       </div>
     </div>
   </div>
