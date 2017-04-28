@@ -14,7 +14,7 @@
         <span class="year"><?= $page->date('Y', 'datetime') ?></span>
       </div>
       <div class="title">
-        <h3><?= $page->title() ?></h3>
+        <h2><?= $page->title() ?></h2>
       </div>
       <div class="text-content">
         <?= $page->message()->kirbytext() ?>

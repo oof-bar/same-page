@@ -12,7 +12,7 @@
           </div>
           <div class="about">
             <div class="name">
-              <h3><?= $member->name() ?></h3>
+              <h2><?= $member->name() ?></h2>
             </div>
             <div class="bio">
               <?= $member->bio()->kirbytext() ?>

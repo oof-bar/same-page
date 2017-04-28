@@ -46,6 +46,9 @@ header
     &.menu-open
       opacity: 1
 
+    +mobile
+      font-size: 1.5rem
+
     ul
       display: flex
       flex-direction: column
@@ -70,15 +73,18 @@ header
         color: $color-blue
 
       &.shop:hover
-        color: $color-green
+        color: $color-orange
 
       &.contact:hover
-        color: $color-purple
+        color: $color-pink
 
       &.news:hover
-        color: $color-pink
+        color: $color-green
 
   .sidebar
     h2
       a
         text-decoration: none
+
+    +tablet
+      margin-top: 2rem

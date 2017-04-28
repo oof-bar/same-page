@@ -16,7 +16,7 @@
             <span class="year"><?= $post->date('Y', 'datetime') ?></span>
           </div>
           <div class="title">
-            <h3><a href="<?= $post->url() ?>"><?= $post->title() ?></a></h3>
+            <h2><a href="<?= $post->url() ?>"><?= $post->title() ?></a></h2>
           </div>
           <div class="text-content">
             <?= $post->message()->kirbytext() ?>
