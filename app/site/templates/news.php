@@ -1,6 +1,6 @@
 <? snippet('header') ?>
 
-<section class="blog">
+<section class="news">
   <div class="wrap">
     <div class="feed">
       <? foreach ( $posts as $post ) { ?>
