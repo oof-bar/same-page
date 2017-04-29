@@ -5,14 +5,18 @@ section.members
       display: flex
       justify-content: flex-start
       flex-direction: row
-      align-items: center
+      flex-wrap: wrap
 
   .profile-photo
     width: 20%
-    margin-right: 3rem
+    margin-right: 5%
 
     +tablet
       margin-bottom: 2rem
+      width: 35%
+
+    +mobile
+      width: 50%
 
     .avatar
       +filling-image
@@ -27,7 +31,13 @@ section.members
         +lazy-image
 
   .about
-    width: 80%
+    width: 75%
+
+    +tablet
+      width: 60%
+
+    +mobile
+      width: 100%
 
   .link
     margin-top: 1.75rem
