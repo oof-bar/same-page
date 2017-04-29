@@ -7,7 +7,7 @@
         <ul class="social">
           <? foreach ( $site->social()->toStructure() as $link ) { ?>
             <li>
-              <?= html::a($link->url(), $link->service(), [
+              <?= html::a($link->link(), $link->service(), [
                 'target' => '_blank',
                 'class' => 'link'
               ]) ?>
