@@ -6,6 +6,23 @@
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
 
   <title><?= $site->title()->html() ?> | <?= $page->title()->html() ?></title>
+  <meta name="description" content="<?= $site->description()->html() ?>">
+  <meta name="keywords" content="<?= join($site->keywords()->split(), ', ') ?>">
+  <link rel="shortcut icon" href="assets/images/favicon.ico" type="image/x-icon" />
+
+  <!-- facebook -->
+  <meta property="og:title" content="<?= $site->title()->html() ?> | <?= $page->title()->html() ?>" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="<?= url() ?>" />
+  <meta property="og:image" content="<?= Help::asset_url('images', 'social-preview.png') ?>" />
+  <meta property="og:description" content="<?= $site->description()->html() ?>" />
+
+  <!-- twitter -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="<?= $site->title()->html() ?> | <?= $page->title()->html() ?>" />
+  <meta name="twitter:description" content="<?= $site->description()->html() ?>" />
+  <meta name="twitter:url" content="<?= url() ?>" />
+  <meta name="twitter:image" content="<?= Help::asset_url('images', 'social-preview.png') ?>" />
 
   <?= css('assets/css/app.css') ?>
   <?= css('@auto') ?>
