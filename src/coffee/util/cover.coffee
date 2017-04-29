@@ -2,15 +2,19 @@ Sizer = require 'util/sizer'
 
 module.exports = class Cover
   constructor: (@content, min = 0, max = Infinity) ->
-    new Sizer
+    @sizer = new Sizer
       min: min
       max: max
       onactive: (e) =>
         @resize e
+      onexit: (e) =>
+        @reset()
 
     @resize()
 
   resize: (e) ->
+    return unless @sizer.isActive()
+
     # Images may switch contexts, so re-fetch this, each time
     context = @content.parent()
 
@@ -41,3 +45,9 @@ module.exports = class Cover
         width: "#{ env.width }px"
         marginLeft: 0
         marginTop: "#{ Math.floor (env.height - (env.width / img.ratio)) / 2 }px"
+
+  reset: ->
+    @content.css
+      width: ''
+      marginLeft: ''
+      marginTop: ''

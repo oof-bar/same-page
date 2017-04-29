@@ -6,7 +6,7 @@ module.exports = (collection) ->
     container = $(el)
     img = $('<img />')
 
-    background = new Cover img
+    background = new Cover img, 1020
     container.data 'background-image'
 
     img.attr 'src', container.data 'background-image'

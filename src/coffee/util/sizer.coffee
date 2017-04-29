@@ -15,6 +15,9 @@ module.exports = class Sizer
 
     @screen.on 'resize', (e) => @resize e
 
+  isActive: ->
+    window.innerWidth > @options.min and window.innerWidth < @options.max
+
   resize: (e) ->
     current = (window.innerWidth > @options.min) and (window.innerWidth <= @options.max)
 
