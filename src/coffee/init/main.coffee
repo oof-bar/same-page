@@ -7,6 +7,7 @@ module.exports = ->
     common: require './common'
     home: require './home'
     members: require './members'
+    contact: require './contact'
 
   actions.before()
   actions.common()
