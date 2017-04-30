@@ -42,6 +42,6 @@ fields:
         type: text
       link:
         label: Link
-        type: url
+        type: text
 
 
