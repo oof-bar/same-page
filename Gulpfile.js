@@ -8,7 +8,8 @@ var gulp = require('gulp'),
     test = require('gulp-if'),
     del = require('del'),
     rename = require('gulp-rename'),
-    sassInlineAsset = require('sass-inline-asset');
+    sassInlineAsset = require('sass-inline-asset'),
+    autoprefixer = require('gulp-autoprefixer');
 
 var paths = {
   scripts: {
@@ -42,6 +43,10 @@ var templates = {
         includePaths: require('node-neat').includePaths.concat(require('node-reset-scss').includePath),
         functions: sassInlineAsset()
       }).on('error', sass.logError))
+      .pipe(autoprefixer({
+        browsers: ['last 2 versions'],
+        cascade: false
+      }))
       .pipe(gulp.dest(paths.stylesheets.out));
 
     return stream;
